@@ -9,11 +9,31 @@ const serviceMethod = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve("He There!");
-        }, 1000);
+        }, 500);
     });
 };
 
 app.get('/get', async (req, res) => {
+    return res.send(await serviceMethod());
+});
+
+app.get('/get/one', async (req, res) => {
+    return res.send(await serviceMethod());
+});
+
+app.get('/get/two', async (req, res) => {
+    return res.send(await serviceMethod());
+});
+
+app.get('/get/three', async (req, res) => {
+    return res.send(await serviceMethod());
+});
+
+app.get('/get/four', async (req, res) => {
+    return res.send(await serviceMethod());
+});
+
+app.get('/get/five', async (req, res) => {
     return res.send(await serviceMethod());
 });
 
